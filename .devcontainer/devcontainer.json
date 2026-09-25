@@ -30,6 +30,7 @@
       ],
       "settings": {
         "java.configuration.updateBuildConfiguration": "automatic",
+        "java.server.launchMode": "Standard",
         "java.test.config": { "name": "default" },
         "jupyter.askForKernelRestart": false,
         "editor.fontSize": 15,
