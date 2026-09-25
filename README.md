@@ -99,7 +99,7 @@ You can commit and push as many times as you want. Your latest push is what gets
 - **Autograding:** `.github/workflows/autograde.yml` runs `mvn test` on every push and publishes a test report. Tests are in `src/test/java/`.
 - **Reuse:** In repo **Settings → General**, check **Template repository**. Students can then click **Use this template** (or you can hand out copies with an assignment tool) and every copy gets the same environment.
 - **Faster startup:** Consider enabling **Codespaces prebuilds** (Settings → Codespaces) for the template so students don't wait on the setup script.
-- **Notebook caveat:** Notebooks run on JShell, so classes and `main` are optional there. It also forgives a missing semicolon on the last line of a cell. Part 2 moves students to real `.java` files for this reason.
+- **Notebook caveat:** Notebooks run on JShell, so classes and `main` are optional there. It also forgives a missing semicolon on the last line of a cell. Section 5 of the notebook bridges the gap: students define a full `class` with `main` in a cell and call `main` themselves, before Part 2 moves them to real `.java` files.
 - The Open-in-Codespaces badge above points at this repo. Update it if you copy this template.
 
 </details>
