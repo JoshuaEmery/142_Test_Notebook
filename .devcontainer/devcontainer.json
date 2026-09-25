@@ -1,0 +1,50 @@
+{
+  // CS 142 - Java + Jupyter notebooks, ready to go in GitHub Codespaces.
+  // Students never install a JDK or IDE: everything below is set up automatically.
+  "name": "CS 142 Java",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+
+  "features": {
+    // Maven for building and running the JUnit tests (the JDK already comes with the image).
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installMaven": "true",
+      "installGradle": "false"
+    },
+    // Python is only here to run Jupyter, which hosts the Java notebook kernel.
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    }
+  },
+
+  // Installs Jupyter and the JJava kernel (a Java kernel for Jupyter, built on JShell).
+  // The version is pinned so every student gets the same kernel; test before bumping it.
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "ms-toolsai.jupyter",
+        "ms-python.python"
+      ],
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.test.config": { "name": "default" },
+        "jupyter.askForKernelRestart": false,
+        "editor.fontSize": 15,
+        "files.autoSave": "afterDelay"
+      }
+    },
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "notebooks/01-hello-variables.ipynb"
+      ]
+    }
+  },
+
+  "hostRequirements": {
+    "cpus": 2
+  }
+}
